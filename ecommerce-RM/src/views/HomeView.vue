@@ -2,7 +2,7 @@
   import Header from '../components/Header.vue'
   import ProductCard from '../components/ProductCard.vue'
 
-  import { ref, onMounted } from 'vue'
+  import { ref, onMounted, watch } from 'vue'
   import axios from 'axios'
 
   const produtos = ref([])
@@ -10,9 +10,17 @@
   const limit = 12
   const skip = ref(0)
   const totalProdutos = ref(194)
+  const search = ref('')
 
   const fetchProdutos = async () => {
-    const response = await axios.get(`https://dummyjson.com/products?limit=12&skip=${skip.value}`)
+    let url = ''
+    if(search.value.trim() === ''){
+      url = `https://dummyjson.com/products?limit=12&skip=${skip.value}`
+    }else{
+      url = `https://dummyjson.com/products/search?q=${search.value}&limit=12&skip=${skip.value}`
+    }
+
+    const response = await axios.get(url)
     const products = response.data.products
 
     const productFilter = products.map(p => ({
@@ -42,7 +50,10 @@
       fetchProdutos()
     }
   }
-
+  watch(search, () => {
+    skip.value = 0
+    fetchProdutos()
+  })
   onMounted(fetchProdutos)
 </script>
 
