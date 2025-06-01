@@ -27,7 +27,28 @@
                     <div class="flex items-baseline space-x-3 mb-4">
                         <span class="text-3xl font-bold text-slate-900">${{ product.preco - product.desconto }}</span>
                         <span class="text-xl text-slate-500 line-through">${{ product.preco}}</span>
-                        <span class="bg-gradient-to-r from-red-500 to-pink-500 py-1 px-3 text-sm font-bold rounded-full text-white">{{ product.desconto }}</span>
+                        <span class="bg-gradient-to-r from-red-500 to-pink-500 py-1 px-2 text-sm font-bold rounded-full text-white">-{{ product.desconto }}%</span>
+                    </div>
+                    <div class="mb-6 flex items-center space-x-4">
+                        <div>Estrelinhas</div>
+                        <div>Avaliações</div>
+                    </div>
+                    <h3 class="text-slate-900 font-bold mb-3 text-lg">Descrição</h3>
+                    <p class="text-slate-600 leading-relax">{{ product.descricao }}</p>
+                    <div class="mt-5">
+                        <h3 class="font-bold text-lg text-slate-900 mb-3">Disponibilidade</h3>
+                        <div class="flex items-center space-x-3">
+                            <div class="h-3 w-3 bg-emerald-5    00 rounded-full"></div>
+                            <span class="text-slate-600">Em estoque ({{ product.estoque }} disponíveis)</span>
+                        </div> 
+                    </div>
+                    <div class="mt-5">
+                        <h3 class="font-bold text-slate-900 text-lg mb-3">Quantidade</h3>
+                        <div class="flex items-center space-x-3">Botoes</div>
+                    </div>
+                    <div class="flex space-x-4 pt-6">
+                        <button class="flex-1 bg-gradient-to-r from-emerald-500 to-teal-500 text-white py-4 px-8 rounded-2xl hover:scale-105 transition transform duration-400 hover:from-emerald-600 hover:to-teal-600 shadow-lg shadow-emerald-500/25">Adicionar ao Carrinho</button>
+                        <button class="border border-2 border-slate-200 rounded-2xl"><i class="p4 fa-solid fa-cart-shopping text-xl p-4 text-slate-300"></i></button>
                     </div>
                 </div>
             </div>
