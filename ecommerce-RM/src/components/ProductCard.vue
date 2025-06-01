@@ -1,9 +1,16 @@
     <template>
-        <div class="bg-white rounded-3xl shadow-xl">
-            <div class="bg-gradient-to-br from-zinc-300 to-zing-300">
+        <div class="bg-white rounded-3xl shadow-sm overflow-hidden hover:scale-104 hover:shadow-xl transition transform duration-500">
+            <div class="relative aspect-square bg-gradient-to-br from-zinc-300 to-zing-300 ">
                 <img :src="produto.thumbnail" alt="">
+                <div class="absolute top-4 left-4">
+                    <span class="px-3 py-1 bg-gradient-to-r from-red-500 to-pink-600 text-white rounded-full text-sm font-bold">-{{ produto.desconto }}%</span>
+                </div>
+                <div>
+                    <button class="absolute top-4 right-4 rounded-full bg-white shadow-lg w-10 h-10"><i class="p4 fa-regular fa-heart text-xl"></i></button>
+                </div>
             </div>
             <div class="p-6">
+                
                 <span class="text-xs bg-emerald-50 rounded-full px-2 py-1 text-emerald-600 font-medium mb-4">{{ produto.categoria }}</span>
                 <h3 class="font-bold text-slate-900 mb-2 text-lg">{{ produto.nome}}</h3>
                 <p class="mb-4 text-slate-500 text-xs line-clamp-2">{{ produto.descricao }}</p>

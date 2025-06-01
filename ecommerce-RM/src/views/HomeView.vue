@@ -15,9 +15,9 @@
       id: p.id,
       nome: p.title,
       descricao: p.description,
-      categoria: p.category,
+      categoria: p.category,  
       preco: p.price,
-      desconto: p.discountPercentage,
+      desconto: p.discountPercentage.toFixed(2),
       estoque: p.stock,
       thumbnail: p.thumbnail,
       imagem: p.images
@@ -33,7 +33,7 @@
 <template>
   <main>
     <Header></Header>
-    <div class="grid grid-cols-4 gap-4">
+    <div class="grid grid-cols-4 gap-4 mt-10">
       <ProductCard v-for="p in produtos" :produto="p"></ProductCard>
     </div>
     
