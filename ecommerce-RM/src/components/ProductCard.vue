@@ -1,6 +1,6 @@
     <template>
         <router-link :to="`/product/${produto.id}`" class="bg-white rounded-3xl shadow-sm overflow-hidden hover:scale-104 hover:shadow-xl transition transform duration-500">
-            <div class="relative aspect-square bg-gradient-to-br from-zinc-300 to-zing-300 ">
+            <div class="relative bg-gradient-to-br from-zinc-300 to-zing-300 ">
                 <img :src="produto.thumbnail" alt="">
                 <div class="absolute top-4 left-4">
                     <span class="px-3 py-1 bg-gradient-to-r from-red-500 to-pink-600 text-white rounded-full text-sm font-bold">-{{ produto.desconto }}%</span>
@@ -9,13 +9,12 @@
                     <button class="absolute top-4 right-4 rounded-full bg-white shadow-lg w-10 h-10"><i class="p4 fa-regular fa-heart text-xl"></i></button>
                 </div>
             </div>
-            <div class="p-6">
-                
-                <span class="text-xs bg-emerald-50 rounded-full px-2 py-1 text-emerald-600 font-medium mb-4">{{ produto.categoria }}</span>
-                <h3 class="font-bold text-slate-900 mb-2 text-lg">{{ produto.nome}}</h3>
-                <p class="mb-4 text-slate-500 text-xs line-clamp-2">{{ produto.descricao }}</p>
-                <div class="mb-4 flex items-center justify-between">
-                    <span class="text-2xl font-bold text-slate-900">
+            <div class="p-4">  
+                <span class="text-xs bg-emerald-50 rounded-full px-2 py-1 text-emerald-600 font-medium mb-3 tracking-wide">{{ produto.categoria }}</span>
+                <h3 class="font-bold text-slate-900 mb-2 mt-2 text-base">{{ produto.nome}}</h3>
+                <p class="mb-3 text-slate-500 text-xs line-clamp-2">{{ produto.descricao }}</p>
+                <div class="mb-3 flex items-center justify-between">
+                    <span class="text-xl font-bold text-slate-900">
                        ${{ produto.preco }}
                     </span>
                     <span class="text-xs px-2 py-1 font-medium rounded-full bg-emerald-50 text-emerald-500">

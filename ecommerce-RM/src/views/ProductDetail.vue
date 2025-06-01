@@ -23,10 +23,10 @@
             </div>
             <div class="grid grid-cols-2 gap-12 mt-5">
                 <div class="flex flex-col justify-center">
-                    <img class="bg-neutral-100 rounded-md shadow-lg p-2" :src="product.thumbnail" alt="">
+                    <img class="bg-neutral-100 rounded-xl shadow-lg p-2" :src="product.thumbnail" alt="">
                     <div class="grid grid-cols-4 gap-4 mt-5">
                         <div v-for="f in product.images">
-                            <img class="bg-neutral-100 rounded shadow-lg p-2" :src="f" alt="">
+                            <img class="bg-neutral-100 rounded-xl shadow-lg p-2" :src="f" alt="">
                         </div>
                     </div>
                 </div>
