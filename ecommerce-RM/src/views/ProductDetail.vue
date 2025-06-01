@@ -1,6 +1,13 @@
 <template>
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-        <div class="shadow-lg p-6 md:p-8 lg:p-10 rounded-lg">
+    <div class="max-w-6xl mx-auto px-4 py-2 sm:px-6 py-4 lg:px-8 py-6 flex items-center text-sm space-x-2">
+                <router-link class="text-emerald-600" to="/"><i class="fa-solid fa-arrow-left"></i>  Voltar</router-link>
+                <p class="text-slate-300">></p>
+                <span class="text-slate-500">{{ product.categoria }}</span>
+                <p class="text-slate-300">></p>
+                <span class="text-slate-500">{{ product.nome }}</span>
+    </div>
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+        <div class="shadow-2xl p-6 md:p-8 lg:p-10 rounded-lg mt-2">
             <div class="flex flex-wrap justify-between">
                 <div>
                     <span class="text-sm font-medium text-emerald-300 bg-emerald-50 px-3 py-1 rounded-full">
@@ -38,7 +45,7 @@
                     <div class="mt-5">
                         <h3 class="font-bold text-lg text-slate-900 mb-3">Disponibilidade</h3>
                         <div class="flex items-center space-x-3">
-                            <div class="h-3 w-3 bg-emerald-5    00 rounded-full"></div>
+                            <div class="h-3 w-3 bg-emerald-500 rounded-full"></div>
                             <span class="text-slate-600">Em estoque ({{ product.estoque }} disponíveis)</span>
                         </div> 
                     </div>
