@@ -2,8 +2,8 @@
     <div class="block py-16 bg-gradient-to-r from-slate-900 via-slate800 to-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h1 class="text-5xl font-bold mb-4 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">Produtos Premium</h1>
-                <p class="text-xl text-slate-300 font-bold max-w-2xl mx-auto">Descubra sobre nossos produtos refinados e exclusivos </p>
+                <h1 class="text-5xl font-bold mb-4 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">Premium Products</h1>
+                <p class="text-xl text-slate-300 font-bold max-w-3xl mx-auto">Find out about our luxury products that makes you exclusive wherever you go!</p>
             </div>
         </div>
         <div class="flex flex-wrap justify-center gap-4 mb-8">
