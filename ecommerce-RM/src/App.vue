@@ -8,10 +8,9 @@ import Navbar from './components/Navbar.vue'
 
 <template>
   <Navbar></Navbar>
-
-  <RouterView />
+  <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900">
+    <RouterView />
+  </div>
+  
 </template>
 
-<style scoped>
-
-</style>
