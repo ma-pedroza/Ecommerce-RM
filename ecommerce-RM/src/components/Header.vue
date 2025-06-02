@@ -7,7 +7,7 @@
             </div>
         </div>
         <div class="flex flex-wrap justify-center gap-4 mb-8">
-            <button class="px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 bg-slate-800/50 hover:bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white hover:shadow-rose-500/25 shadow-lg ">All</button>
+            <button class="px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white hover:shadow-rose-500/25 shadow-lg ">All</button>
             <button class="px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-700 hover:bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white hover:shadow-rose-500/25">Wearables</button>
             <button class="px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-700 hover:bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white hover:shadow-rose-500/25">Audio</button>
             <button class="px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-700 hover:bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white hover:shadow-rose-500/25">Laptops</button>

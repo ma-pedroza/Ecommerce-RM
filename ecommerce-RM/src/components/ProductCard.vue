@@ -24,7 +24,7 @@
                 </div>
                 <div class="flex items-center justify-center">
                     <button class="px-6 py-2 text-white bg-gradient-to-r from-emerald-500 to-teal-500 rounded hoover:from-emerald-600 hover:to-teal-600 transition-all transform hover:scale-105 font-medium shadow-lg shadow-emerald-500/30">
-                        Adicionar
+                        Add
                     </button>
                 </div>
             </div>
