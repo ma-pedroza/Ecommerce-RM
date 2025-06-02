@@ -3,7 +3,7 @@
             <div class="relative bg-gradient-to-br from-zinc-300 to-zing-300 ">
                 <img :src="produto.thumbnail" alt="">
                 <div class="absolute top-4 left-4">
-                    <span class="px-3 py-1 bg-gradient-to-r from-red-500 to-pink-600 text-white rounded-full text-sm font-bold">-{{ produto.desconto }}%</span>
+                    <span class="px-3 py-1 bg-gradient-to-r from-red-500 to-pink-600 text-white rounded-full text-sm font-bold">-{{ produto.desconto}}%</span>
                 </div>
                 <div>
                     <button class="absolute top-4 right-4 rounded-full bg-white shadow-lg w-10 h-10"><i class="p4 fa-regular fa-heart text-xl"></i></button>
@@ -15,7 +15,7 @@
                 <p class="mb-3 text-slate-500 text-xs line-clamp-2">{{ produto.descricao }}</p>
                 <div class="mb-3 flex items-center justify-between">
                     <span class="text-xl font-bold text-slate-900">
-                       ${{ produto.preco }}
+                       ${{ produto.precoDesconto }}
                     </span>
                     <span class="text-xs px-2 py-1 font-medium rounded-full bg-emerald-50 text-emerald-500">
                         {{ produto.estoque }} em estoque

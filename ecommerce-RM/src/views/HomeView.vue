@@ -29,10 +29,11 @@
       descricao: p.description,
       categoria: p.category,  
       preco: p.price,
-      desconto: p.discountPercentage.toFixed(2),
+      desconto: p.discountPercentage.toFixed(0),
       estoque: p.stock,
       thumbnail: p.thumbnail,
-      imagem: p.images
+      imagem: p.images,
+      precoDesconto: (p.price * (1 - p.discountPercentage/100)).toFixed(2)  
     }))
     
     produtos.value = productFilter
