@@ -1,7 +1,7 @@
     <template>
         <router-link :to="`/product/${produto.id}`" class="bg-white rounded-3xl shadow shadow-white/40 overflow-hidden hover:scale-104 hover:shadow-lg transition transform duration-500">
             <div class="relative bg-gradient-to-br from-zinc-300 to-zing-300 ">
-                <img :src="produto.thumbnail" alt="">
+                <img class="w-full h-full" :src="produto.thumbnail" alt="">
                 <div class="absolute top-4 left-4">
                     <span class="px-3 py-1 bg-gradient-to-r from-red-500 to-pink-600 text-white rounded-full text-sm font-bold">-{{ produto.desconto}}%</span>
                 </div>
