@@ -36,9 +36,13 @@
                         <span class="text-xl text-slate-500 line-through">${{ product.preco}}</span>
                         <span class="bg-gradient-to-r from-red-500 to-pink-500 py-1 px-2 text-sm font-bold rounded-full text-white">- {{ product.desconto }}%</span>
                     </div>
-                    <div class="mb-6 flex items-center space-x-4">
-                        <div>Estrelinhas</div>
-                        <div>Avaliações</div>
+                    <div class="mb-6 flex items-center space-x-3">
+                        <span class="font-bold text-slate-700 text-xl" >{{ product.avaliacao }}</span>
+                        <div class="flex space-x-1">
+                            <i
+                                v-for="index in 5" :class="index <= product.avaliacao ? 'fa-solid fa-star text-amber-300' : 'fa-regular fa-star text-slate-300'"
+                            ></i>
+                        </div>
                     </div>
                     <h3 class="text-slate-900 font-bold mb-3 text-lg">Descrição</h3>
                     <p class="text-slate-600 leading-relax">{{ product.descricao }}</p>
@@ -97,6 +101,7 @@ const FetchProduto = async() => {
         images: p.images,
         thumbnail: p.thumbnail,
         precoDesconto: (p.price * (1 - p.discountPercentage/100)).toFixed(2),
+        avaliacao: p.rating
 
     }
 }
