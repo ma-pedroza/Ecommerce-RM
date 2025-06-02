@@ -1,5 +1,5 @@
     <template>
-        <router-link :to="`/product/${produto.id}`" class="bg-white rounded-3xl shadow-sm overflow-hidden hover:scale-104 hover:shadow-xl transition transform duration-500">
+        <router-link :to="`/product/${produto.id}`" class="bg-white rounded-3xl shadow shadow-white/40 overflow-hidden hover:scale-104 hover:shadow-lg transition transform duration-500">
             <div class="relative bg-gradient-to-br from-zinc-300 to-zing-300 ">
                 <img :src="produto.thumbnail" alt="">
                 <div class="absolute top-4 left-4">

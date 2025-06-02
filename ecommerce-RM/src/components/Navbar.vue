@@ -1,5 +1,5 @@
  <template>
-    <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 sticky">
+    <div class="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 sticky">
         <div class="flex items-center justify-between py-5 px-23">
             <router-link to="/" class="flex items-center justify-between gap-2">
                 <div class="rounded-xl bg-gradient-to-r from-rose-500 to-fuchsia-700 h-10 w-10 flex items-center justify-center">

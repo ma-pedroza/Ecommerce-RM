@@ -64,7 +64,7 @@
     <div class="grid grid-cols-4 gap-5 mt-5 px-20">
       <ProductCard v-for="p in produtos" :produto="p"></ProductCard>
     </div>
-    <div class="flex items-center justify-center mt-5 mb-5 space-x-9">
+    <div class="flex items-center justify-center pt-5 pb-5 space-x-9">
       <button @click="previousPage" class="hover:scale-105 cursor-pointer px-4 py-2 rounded-xl text-white bg-rose-600 hover:bg-rose-700  transition transform duration-300 hover:shadow-yellow-50 disabled:opacity-50" :disabled="skip == 0">
         Anterior
       </button>
@@ -72,6 +72,5 @@
         Próximo
       </button>
     </div>
-    
   </main>
 </template>

@@ -1,5 +1,5 @@
 <template>
-    <div class="block py-16 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white">
+    <div class="block py-16 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h1 class="text-5xl font-bold mb-4 bg-gradient-to-r from-rose-500 to-fuchsia-700 bg-clip-text text-transparent">Premium Products</h1>
