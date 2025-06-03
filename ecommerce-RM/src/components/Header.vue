@@ -6,17 +6,46 @@
                 <p class="text-xl text-slate-300 font-bold max-w-3xl mx-auto">Find out about our luxury products that makes you exclusive wherever you go!</p>
             </div>
         </div>
-        <div class="flex flex-wrap justify-center gap-4 mb-8">
+        <div class="flex flex-wrap justify-center px-4 gap-4 mb-8">
             <button class="px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white hover:shadow-rose-500/25 shadow-lg ">All</button>
-            <button class="px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-700 hover:bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white hover:shadow-rose-500/25">Wearables</button>
-            <button class="px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-700 hover:bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white hover:shadow-rose-500/25">Audio</button>
-            <button class="px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-700 hover:bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white hover:shadow-rose-500/25">Laptops</button>
-            <button class="px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-700 hover:bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white hover:shadow-rose-500/25">Smartphones</button>
-            <button class="px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-700 hover:bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white hover:shadow-rose-500/25">Jewlery</button>
-            <button class="px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-700 hover:bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white hover:shadow-rose-500/25">Clothing</button>
+            <button @click="getCategoriaSelecionada(cat.nome)" v-for="cat in categorias" class="px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-700 hover:bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white hover:shadow-rose-500/25">{{ cat.nome }}</button>    
         </div>
     </div>
 </template>
-<script></script>
+<script setup>
+import {ref, onMounted} from 'vue'
+import axios from 'axios'
+const categorias = ref([])
+const categoriaSelecionada = ref('')
+
+defineProps({
+    categorias: Object,
+    onClick:  {
+        type: Function,
+        required: true
+    }
+})
+
+
+  const fetchCategorias = async () =>{
+    const response = await axios.get('https://dummyjson.com/products/categories')
+    const categories = response.data
+
+    const categoriesFilter = categories.map(c => ({
+      nome: c.name,
+      url: c.url,
+      slug: c.slug
+    }))
+
+    categorias.value = categoriesFilter
+  }
+
+  const getCategoriaSelecionada = (categoria) => {
+    categoriaSelecionada.value = categoria
+    console.log(categoriaSelecionada.value)
+  }
+
+onMounted(fetchCategorias)
+</script>
 
 

@@ -40,6 +40,8 @@
 
   }
 
+
+
   const nextPage = () => {
     skip.value += limit
     fetchProdutos()
