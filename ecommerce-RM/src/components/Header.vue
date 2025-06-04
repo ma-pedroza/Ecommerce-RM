@@ -6,9 +6,9 @@
                 <p class="text-xl text-slate-300 font-bold max-w-3xl mx-auto">Find out about our luxury products that makes you exclusive wherever you go!</p>
             </div>
         </div>
-        <div class="flex flex-wrap justify-center px-4 gap-4 mb-8">
-            <button @click="getCategoriaSelecionada('')" :class="botaoCategoriaSelecionado === '' ?'bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white shadow-rose-500/25 px-8 py-3 rounded-full font-medium transition-all transform scale-115' :'px-8 py-3 rounded-full font-medium transition-all transform hover:scale-115 bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-700 hover:bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white hover:shadow-rose-500/25'">All</button>
-            <button @click="getCategoriaSelecionada(cat.slug)" v-for="cat in categorias" :class="botaoCategoriaSelecionado === cat.slug ?'bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white shadow-rose-500/25 px-8 py-3 rounded-full font-medium transition-all transform scale-115' :'px-8 py-3 rounded-full font-medium transition-all transform hover:scale-115 bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-700 hover:bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white hover:shadow-rose-500/25'">{{ cat.nome }}</button>    
+        <div class="flex flex-wrap justify-center px-24 gap-4">
+            <button @click="getCategoriaSelecionada('')" :class="botaoCategoriaSelecionado === '' ?'bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white shadow-rose-500/25 px-3 py-1 rounded-full font-medium transition-all transform scale-110' :'px-3 py-1  rounded-full font-medium transition-all transform hover:scale-110 bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-700 hover:bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white hover:shadow-rose-500/25'">All</button>
+            <button @click="getCategoriaSelecionada(cat.slug)" v-for="cat in categorias" :class="botaoCategoriaSelecionado === cat.slug ?'bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white shadow-rose-500/25 px-3 py-1  rounded-full font-medium transition-all transform scale-110' :'px-3 py-1  rounded-full font-medium transition-all transform hover:scale-110 bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-700 hover:bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white hover:shadow-rose-500/25'">{{ cat.nome }}</button>    
         </div>
     </div>
 </template>
