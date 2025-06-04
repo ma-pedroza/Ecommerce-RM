@@ -7,8 +7,8 @@
             </div>
         </div>
         <div class="flex flex-wrap justify-center px-4 gap-4 mb-8">
-            <button class="px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white hover:shadow-rose-500/25 shadow-lg ">All</button>
-            <button @click="getCategoriaSelecionada(cat.nome)" v-for="cat in categorias" class="px-8 py-3 rounded-full font-medium transition-all transform hover:scale-105 bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-700 hover:bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white hover:shadow-rose-500/25">{{ cat.nome }}</button>    
+            <button @click="getCategoriaSelecionada('')" :class="botaoCategoriaSelecionado === '' ?'bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white shadow-rose-500/25 px-8 py-3 rounded-full font-medium transition-all transform scale-115' :'px-8 py-3 rounded-full font-medium transition-all transform hover:scale-115 bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-700 hover:bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white hover:shadow-rose-500/25'">All</button>
+            <button @click="getCategoriaSelecionada(cat.slug)" v-for="cat in categorias" :class="botaoCategoriaSelecionado === cat.slug ?'bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white shadow-rose-500/25 px-8 py-3 rounded-full font-medium transition-all transform scale-115' :'px-8 py-3 rounded-full font-medium transition-all transform hover:scale-115 bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 border border-slate-700 hover:bg-gradient-to-r from-rose-500 to-fuchsia-700 text-white hover:shadow-rose-500/25'">{{ cat.nome }}</button>    
         </div>
     </div>
 </template>
@@ -16,7 +16,8 @@
 import {ref, onMounted} from 'vue'
 import axios from 'axios'
 const categorias = ref([])
-const categoriaSelecionada = ref('')
+const botaoCategoriaSelecionado = ref('')
+const emit = defineEmits(['categoriaSelecionada'])
 
 defineProps({
     categorias: Object,
@@ -41,8 +42,8 @@ defineProps({
   }
 
   const getCategoriaSelecionada = (categoria) => {
-    categoriaSelecionada.value = categoria
-    console.log(categoriaSelecionada.value)
+    emit('categoriaSelecionada', categoria)
+    botaoCategoriaSelecionado.value = categoria
   }
 
 onMounted(fetchCategorias)

@@ -11,13 +11,14 @@
   const skip = ref(0)
   const totalProdutos = ref(194)
   const search = ref('')
+  const categoriaSelecionada = ref ('')
 
   const fetchProdutos = async () => {
     let url = ''
-    if(search.value.trim() === ''){
-      url = `https://dummyjson.com/products?limit=12&skip=${skip.value}`
+    if(categoriaSelecionada.value){
+      url = `https://dummyjson.com/products/category/${categoriaSelecionada.value}`
     }else{
-      url = `https://dummyjson.com/products/search?q=${search.value}&limit=12&skip=${skip.value}`
+      url = `https://dummyjson.com/products/search?q=&limit=12&skip=${skip.value}`
     }
 
     const response = await axios.get(url)
@@ -40,7 +41,9 @@
 
   }
 
-
+  const setcategoriaSelecionada = (categoria) => {
+    categoriaSelecionada.value = categoria
+  }
 
   const nextPage = () => {
     skip.value += limit
@@ -57,12 +60,16 @@
     skip.value = 0
     fetchProdutos()
   })
+  watch(categoriaSelecionada, () =>{
+    skip.value = 0
+    fetchProdutos()
+  })
   onMounted(fetchProdutos)
 </script>
 
 <template>
   <main>
-    <Header></Header>
+    <Header @categoriaSelecionada="setcategoriaSelecionada"></Header>
     <div class="grid grid-cols-4 gap-5 mt-5 px-20">
       <ProductCard v-for="p in produtos" :produto="p"></ProductCard>
     </div>
