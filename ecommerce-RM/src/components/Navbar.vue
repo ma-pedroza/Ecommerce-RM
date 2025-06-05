@@ -1,7 +1,7 @@
  <template>
     <div class="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 sticky">
         <div class="flex items-center justify-between py-5 px-23">
-            <router-link to="/" class="flex items-center justify-between gap-2">
+            <router-link to="/" class="flex items-center justify-between gap-2 hover:scale-110 transition transform duration-400">
                 <div class="rounded-xl bg-gradient-to-r from-rose-500 to-fuchsia-700 h-10 w-10 flex items-center justify-center">
                     <span class="font-bold text-white text-lg">RM</span>
                 </div>
@@ -16,7 +16,7 @@
                 </div>
             <div class="flex items-center space-x-9 ">
                 <button><i class="p4 fa-regular fa-heart text-xl text-white"></i></button>
-                <button><i class="p4 fa-solid fa-cart-shopping text-xl text-white"></i></button>
+                <router-link to="/cart" ><i class="p4 fa-solid fa-cart-shopping text-xl text-white hover:scale-110 hover:text-emerald-400 transition transform duration-400"></i></router-link>
                 <!-- POR ENQUANTO SEM FUNCIONALIDADES -->
             </div>
         </div>
