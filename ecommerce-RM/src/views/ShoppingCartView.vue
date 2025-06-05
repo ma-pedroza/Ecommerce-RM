@@ -16,7 +16,7 @@
                 <div class="bg-white shadow-white/50 shadow-md rounded-3xl border border-white/20 col-span-2 overflow-hidden">
                     <div v-for="p in carrinho" class="p-8 hover:bg-gray-50/50 transition-all duration-200">
                         <div class="flex items-center space-x-6">
-                            <div class="bg-gradient-to-br from-gray-100 to-gray-200 p-4 shadow-lg rounded-2xl"><img class="w-30 h-20 rounded-2xl" :src="p.thumbnail" alt=""></div>
+                            <div class="bg-gradient-to-br from-gray-100 to-gray-200 p-4 shadow-lg rounded-2xl"><img class="w-60 h-20 rounded-2xl" :src="p.thumbnail" alt=""></div>
                             <div class="">
                                 <h3 class="mb-1 text-lg font-bold text-slate-900">{{ p.nome }}</h3>
                                 <p class="mb-3 text-xs   text-gray-500 line-clamp-1">{{ p.descricao }}</p>
