@@ -58,7 +58,7 @@
                         <div class="flex items-center space-x-3">Botoes</div>
                     </div>
                     <div class="flex space-x-4 pt-6">
-                        <button @click="adicionarAoCarrinho(product)" class="flex-1 bg-gradient-to-r from-emerald-500 to-teal-500 text-white py-4 px-8 rounded-2xl hover:scale-105 transition transform duration-400 hover:from-emerald-600 hover:to-teal-600 shadow-lg shadow-emerald-500/25">Adicionar ao Carrinho</button>
+                        <button @click="adicionarAoCarrinho(product)" class="cursor:pointer flex-1 bg-gradient-to-r from-emerald-500 to-teal-500 text-white py-4 px-8 rounded-2xl hover:scale-105 transition transform duration-400 hover:from-emerald-600 hover:to-teal-600 shadow-lg shadow-emerald-500/25">Adicionar ao Carrinho</button>
                         <button class="border border-2 border-slate-200 rounded-2xl"><i class="p4 fa-solid fa-cart-shopping text-xl p-4 text-slate-300"></i></button>
                     </div>
                 </div>
@@ -125,7 +125,13 @@ const nextPage = () => {
 const adicionarAoCarrinho = (produto) => {
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-    carrinho.push(produto);
+    const exist = carrinho.find(i => i.id === produto.id)
+    if(exist){
+        exist.quantidade += 1
+    }else{
+        carrinho.push({...produto, quantidade: 1});
+    }
+    
 
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
     console.log(localStorage.getItem('carrinho'))

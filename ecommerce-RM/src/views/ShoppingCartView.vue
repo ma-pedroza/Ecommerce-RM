@@ -16,7 +16,7 @@
                 <div class="bg-white shadow-white/50 shadow-md rounded-3xl border border-white/20 col-span-2 overflow-hidden">
                     <div v-for="p in carrinho" class="p-8 hover:bg-gray-50/50 transition-all duration-200">
                         <div class="flex items-center space-x-6">
-                            <div class="bg-gradient-to-br from-gray-100 to-gray-200 p-4 shadow-lg rounded-2xl"><img class="w-30 h-20 rounded-2xl" :src="p.thumbnail" alt=""></div>
+                            <div class="bg-gradient-to-br from-gray-100 to-gray-200 p-4 shadow-lg rounded-2xl "><img class="object-cover rounded-2xl" :src="p.thumbnail" alt=""></div>
                             <div class="">
                                 <h3 class="mb-1 text-lg font-bold text-slate-900">{{ p.nome }}</h3>
                                 <p class="mb-3 text-xs   text-gray-500 line-clamp-1">{{ p.descricao }}</p>
@@ -25,10 +25,14 @@
                                     <span class="rounded-full py-1 px-2 text-xs bg-green-100 text-green-900 font-semibold">Em estoque</span>
                                 </div>
                             </div>
-                            <div>Aumentar | Diminuir</div>
+                            <div class="flex items-center p-2 rounded-2xl bg-gray-50 space-x-2">
+                                <button class="p-2"><i class="fa-solid fa-minus text-gray-500"></i></button>
+                                <span class="text-lg font-bold text-center text-slate-900">{{ p.quantidade }}</span>
+                                <button class="p-2"><i class="fa-solid fa-plus text-gray-500"></i></button>
+                            </div>
                             <div>
                                 <span class="text-md font-bold text-slate-900 mb-3">${{ p.precoDesconto }}</span>
-                                <button class="items-center text-red-500 text-sm"><i class="fa-solid fa-trash "></i> Remove</button>
+                                <button @click="deleteProduto(p.id)" class="items-center text-red-500 text-sm"><i class="fa-solid fa-trash "></i> Remove</button>
                             </div>
                         </div>
                     </div>
@@ -59,6 +63,13 @@ const pegarCarrinho = () => {
     
 }
 
+const deleteProduto = (id) =>{
+    carrinho.value = carrinho.value.filter(i => i.id !== id)
+
+    localStorage.setItem('carrinho', JSON.stringify(carrinho))
+}
+
 
 onMounted(pegarCarrinho)
+console.log(localStorage.getItem('carrinho'))
 </script>
