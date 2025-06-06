@@ -66,7 +66,7 @@
                             <span class="font-bold">$29.99</span>
                         </div>
                         <div v-else="carrinho.length" class="flex justify-between text-gray-600 mb-4">
-                            <span class="font-medium">Frete</span>
+                            <span class="font-medium">Shipping</span>
                             <span class="font-bold">$0.00</span>
                         </div>
                         <div class="flex justify-between text-gray-600 mb-4">
