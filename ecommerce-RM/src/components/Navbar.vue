@@ -10,7 +10,7 @@
                 <div class="flex-1 max-w-2xl mx-8">
                     <div class="relative group">
                         <i class="fa-solid fa-magnifying-glass absolute left-5 top-1/2 transform -translate-y-1/2 group-focus-within:text-rose-500 text-slate-400 text-sm"></i>
-                        <input v-model="search" type="text" placeholder="Descubra nossos produtos..."
+                        <input v-model="search" type="text" placeholder="Discover our products..."
                         class="w-full bg-slate-800/50 border border-slate-700 rounded-2xl focus:ring-2 focus:ring-rose-500 focus:border-transparent text-white placeholder-slate-400 py-4 pl-12 pr-6 transition-all">
                     </div>                
                 </div>

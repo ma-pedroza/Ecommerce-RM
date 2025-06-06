@@ -75,10 +75,10 @@
     </div>
     <div class="flex items-center justify-center pt-5 pb-5 space-x-9">
       <button @click="previousPage" class="hover:scale-105 cursor-pointer px-4 py-2 rounded-xl text-white bg-rose-600 hover:bg-rose-700  transition transform duration-300 hover:shadow-yellow-50 disabled:opacity-50" :disabled="skip == 0">
-        Anterior
+        Previous
       </button>
       <button @click="nextPage" class="hover:scale-105 cursor-pointer px-4 py-2 rounded-xl text-white bg-rose-600 hover:bg-rose-700  transition transform duration-300 hover:shadow-yellow-50 disabled:opacity-50" :disabled="(skip + limit) >= totalProdutos">
-        Próximo
+        Next
       </button>
     </div>
   </main>

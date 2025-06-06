@@ -1,6 +1,6 @@
 <template>
     <div class="max-w-6xl mx-auto px-4 py-2 sm:px-6 py-4 lg:px-8 py-6 flex items-center text-sm space-x-2">
-                <router-link class="text-emerald-600 hover:text-emerald-400 hover:scale-110 transition transform" to="/"><i class="fa-solid fa-arrow-left"></i>  Voltar</router-link>
+                <router-link class="text-emerald-600 hover:text-emerald-400 hover:scale-110 transition transform" to="/"><i class="fa-solid fa-arrow-left"></i>  Back</router-link>
                 <p class="text-slate-300">></p>
                 <span class="text-slate-500">{{ product.categoria }}</span>
                 <p class="text-slate-300">></p>
@@ -44,21 +44,17 @@
                             ></i>
                         </div>
                     </div>
-                    <h3 class="text-slate-900 font-bold mb-3 text-lg">Descrição</h3>
+                    <h3 class="text-slate-900 font-bold mb-3 text-lg">Description</h3>
                     <p class="text-slate-600 leading-relax">{{ product.descricao }}</p>
                     <div class="mt-5">
-                        <h3 class="font-bold text-lg text-slate-900 mb-3">Disponibilidade</h3>
+                        <h3 class="font-bold text-lg text-slate-900 mb-3">Availability</h3>
                         <div class="flex items-center space-x-3">
                             <div class="h-3 w-3 bg-emerald-500 rounded-full"></div>
-                            <span class="text-slate-600">Em estoque ({{ product.estoque }} disponíveis)</span>
+                            <span class="text-slate-600">In stock ({{ product.estoque }} available)</span>
                         </div> 
                     </div>
-                    <div class="mt-5">
-                        <h3 class="font-bold text-slate-900 text-lg mb-3">Quantidade</h3>
-                        <div class="flex items-center space-x-3">Botoes</div>
-                    </div>
-                    <div class="flex space-x-4 pt-6">
-                        <button @click="adicionarAoCarrinho(product)" class="cursor-pointer flex-1 bg-gradient-to-r from-emerald-500 to-teal-500 text-white py-4 px-8 rounded-2xl hover:scale-105 transition transform duration-400 hover:from-emerald-600 hover:to-teal-600 shadow-lg shadow-emerald-500/25">Adicionar ao Carrinho</button>
+                    <div class="flex space-x-4 mt-24 pt-6">
+                        <button @click="adicionarAoCarrinho(product)" class="cursor-pointer flex-1 bg-gradient-to-r from-emerald-500 to-teal-500 text-white py-4 px-8 rounded-2xl hover:scale-105 transition transform duration-400 hover:from-emerald-600 hover:to-teal-600 shadow-lg shadow-emerald-500/25">Add to cart</button>
                         <button class="border border-2 border-slate-200 rounded-2xl"><i class="p4 fa-solid fa-cart-shopping text-xl p-4 text-slate-300"></i></button>
                     </div>
                 </div>
@@ -67,10 +63,10 @@
     </main>
     <div class="flex items-center justify-center pb-5 space-x-9">
     <button @click="previousPage" class="hover:scale-105 cursor-pointer px-4 py-2 rounded-xl text-white bg-rose-600 hover:bg-rose-700  transition transform duration-300 hover:shadow-yellow-50 disabled:opacity-50" :disabled="skip == 0">
-    Anterior
+    Previous
     </button>
     <button @click="nextPage" class="hover:scale-105 cursor-pointer px-4 py-2 rounded-xl text-white bg-rose-600 hover:bg-rose-700  transition transform duration-300 hover:shadow-yellow-50 disabled:opacity-50" :disabled="(skip + limit) >= totalProdutos">
-    Próximo
+    Next
     </button>
 </div>
 </template>

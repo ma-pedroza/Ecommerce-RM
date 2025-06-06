@@ -18,7 +18,7 @@
                        ${{ produto.precoDesconto }}
                     </span>
                     <span class="text-xs px-2 py-1 font-medium rounded-full bg-emerald-50 text-emerald-500">
-                        {{ produto.estoque }} em estoque
+                        {{ produto.estoque }} in stock
                     </span>
                 </div>
                 <div class="flex items-center justify-center">
