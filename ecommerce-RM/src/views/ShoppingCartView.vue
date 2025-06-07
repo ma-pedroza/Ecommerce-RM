@@ -26,13 +26,13 @@
                                 </div>
                             </div>
                             <div class="min-h-10 flex items-center p-2 rounded-2xl bg-gray-50 space-x-3">
-                                <button @click="diminuirQuatidade(p)" class="py-1 px-2 bg-gray-200/50 rounded-lg hover:scale-110 hover:bg-rose-300 transform transition duration-200 hover:shadow"><i class="fa-solid fa-minus text-rose-500"></i></button>
+                                <button @click="diminuirQuatidade(p)" class="cursor-pointer py-1 px-2 bg-gray-200/50 rounded-lg hover:scale-110 hover:bg-rose-300 transform transition duration-200 hover:shadow"><i class="fa-solid fa-minus text-rose-500"></i></button>
                                 <span class="text-lg font-bold text-center text-slate-900">{{ p.quantidade }}</span>
-                                <button @click="aumentarQuantidade(p)" class="py-1 px-2 bg-gray-200/50 rounded-lg hover:scale-110 hover:bg-emerald-200 transform transition duration-200 hover:shadow"><i class="fa-solid fa-plus text-emerald-500"></i></button>
+                                <button @click="aumentarQuantidade(p)" class="cursor-pointer py-1 px-2 bg-gray-200/50 rounded-lg hover:scale-110 hover:bg-emerald-200 transform transition duration-200 hover:shadow"><i class="fa-solid fa-plus text-emerald-500"></i></button>
                             </div>
                             <div class="min-h-10 flex flex-col items-center">
                                 <span class="text-2xl font-bold text-slate-900 mb-3">${{ p.precoDesconto }}</span>
-                                <button @click="deleteProduto(p.id)" class="flex justify-between gap-3 bg-red-50 p-2 rounded-lg font-medium items-center text-red-400 text-sm hover:scale-110 transform transition duration-200 hover:shadow"><i class="fa-solid fa-trash "></i> Remove</button>
+                                <button @click="deleteProduto(p.id)" class="flex justify-between gap-3 bg-red-50 p-2 rounded-lg font-medium items-center text-red-400 text-sm hover:scale-110 transform transition duration-200 hover:shadow cursor-pointer"><i class="fa-solid fa-trash "></i> Remove</button>
                             </div>
                         </div>
                     </div>
@@ -79,6 +79,12 @@
                                 <span v-if="carrinho.length >= 1" class="text-3xl font-bold bg-gradient-to-r from-rose-500 to-fuchsia-700 bg-clip-text text-transparent">${{ (valorTotal + 29.99).toFixed(2) }}</span>
                                 <span v-else="carrinho.length" class="text-3xl font-bold bg-gradient-to-r from-rose-500 to-fuchsia-700 bg-clip-text text-transparent">${{ 0 }}</span>
                             </div>
+                        </div>
+                        <div class="w-full mt-4 p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-xl hover:scale-105 transition transform duration-200 cursor-pointer hover:shadow-xl">
+                            <div class="flex items-center justify-center space-x-2">
+                                <i class="fa-regular fa-credit-card text-white text-lg"></i>
+                                <span class="font-bold text-white text-lg">Finish Purchase</span>
+                            </div>  
                         </div>
                     </div>
                 </div>
