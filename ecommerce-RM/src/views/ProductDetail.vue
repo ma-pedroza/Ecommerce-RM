@@ -2,9 +2,9 @@
     <div class="max-w-6xl mx-auto px-4 py-2 sm:px-6 py-4 lg:px-8 py-6 flex items-center text-sm space-x-2">
                 <router-link class="text-emerald-600 hover:text-emerald-400 hover:scale-110 transition transform" to="/"><i class="fa-solid fa-arrow-left"></i>  Back</router-link>
                 <p class="text-slate-300">></p>
-                <span class="text-slate-500">{{ product.categoria }}</span>
+                <span class="text-slate-500 hover:scale-110 transition transform hover:text-rose-400">{{ product.categoria }}</span>
                 <p class="text-slate-300">></p>
-                <span class="text-slate-500">{{ product.nome }}</span>
+                <span class="text-slate-500 hover:scale-110 transition transform hover:text-rose-400">{{ product.nome }}</span>
     </div>
     <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div class="shadow-white/40 shadow-md p-6 md:p-8 lg:p-10 rounded-lg mt-2 bg-white">
