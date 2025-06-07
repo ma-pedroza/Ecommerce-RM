@@ -16,8 +16,8 @@
                 <div v-if="carrinho.length >= 1" class=" bg-white shadow-white/50 shadow-md rounded-3xl border border-white/20 col-span-2  overflow-hidden ">
                     <div v-for="p in carrinho" class="p-8 hover:bg-gray-50/50 transition-all duration-200">
                         <div class="flex items-center space-x-6">
-                            <div class="bg-gradient-to-br from-gray-100 to-gray-200 p-4 shadow-lg rounded-2xl w-52 h-30 overflow-hidden"><img class="rounded-2xl w-full h-full" :src="p.thumbnail" alt=""></div>
-                            <div class="overflow-hidden">
+                            <div class="min-h-10 bg-gradient-to-br from-gray-100 to-gray-200 p-4 shadow-lg rounded-2xl w-30 h-30 overflow-hidden flex-shrink-0"><img class="rounded-2xl h-full w-full object-cover" :src="p.thumbnail" alt=""></div>
+                            <div class="min-h-10 overflow-hidden">
                                 <h3 class="mb-1 text-lg font-bold text-slate-900">{{ p.nome }}</h3>
                                 <p class="mb-3 text-xs text-gray-500 line-clamp-1">{{ p.descricao }}</p>
                                 <div class="flex space-x-2 items-center">
@@ -25,12 +25,12 @@
                                     <span class="rounded-full py-1 px-2 text-xs bg-green-100 text-green-900 font-semibold">In stock</span>
                                 </div>
                             </div>
-                            <div class="flex items-center p-2 rounded-2xl bg-gray-50 space-x-3">
+                            <div class="min-h-10 flex items-center p-2 rounded-2xl bg-gray-50 space-x-3">
                                 <button @click="diminuirQuatidade(p)" class="py-1 px-2 bg-gray-200/50 rounded-lg hover:scale-110 hover:bg-rose-300 transform transition duration-200 hover:shadow"><i class="fa-solid fa-minus text-rose-500"></i></button>
                                 <span class="text-lg font-bold text-center text-slate-900">{{ p.quantidade }}</span>
                                 <button @click="aumentarQuantidade(p)" class="py-1 px-2 bg-gray-200/50 rounded-lg hover:scale-110 hover:bg-emerald-200 transform transition duration-200 hover:shadow"><i class="fa-solid fa-plus text-emerald-500"></i></button>
                             </div>
-                            <div class="flex flex-col items-center">
+                            <div class="min-h-10 flex flex-col items-center">
                                 <span class="text-2xl font-bold text-slate-900 mb-3">${{ p.precoDesconto }}</span>
                                 <button @click="deleteProduto(p.id)" class="flex justify-between gap-3 bg-red-50 p-2 rounded-lg font-medium items-center text-red-400 text-sm hover:scale-110 transform transition duration-200 hover:shadow"><i class="fa-solid fa-trash "></i> Remove</button>
                             </div>
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col-1">
+                <div class="flex flex-col">
                     <div class="bg-white rounded-3xl shadow-white/50 shadow-md border border-white/20 p-10 w-full backdrop-blur-sm">
                         <div class="flex items-center space-x-3 mb-6">
                             <div class="bg-gray-200/50 py-2 px-3 rounded-xl"><i class="fa-solid fa-calculator text-3xl bg-gradient-to-r from-rose-500 to-fuchsia-700 bg-clip-text text-transparent" ></i></div>
