@@ -5,6 +5,18 @@
   import { ref, onMounted, watch } from 'vue'
   import axios from 'axios'
 
+  const props = defineProps({
+  busca: String
+  })
+
+
+  watch(() => props.busca, () => {
+  skip.value = 0
+  fetchProdutos()
+})
+
+
+
   const produtos = ref([])
   const currentPage = ref(1)
   const limit = 12
@@ -12,11 +24,16 @@
   const totalProdutos = ref(194)
   const search = ref('')
   const categoriaSelecionada = ref ('')
+  
 
   const fetchProdutos = async () => {
+    const word = props.busca
     let url = ''
     if(categoriaSelecionada.value){
       url = `https://dummyjson.com/products/category/${categoriaSelecionada.value}`
+    }else if(word!=''){
+      url = `https://dummyjson.com/products/search?q=${encodeURIComponent(word)}`
+
     }else{
       url = `https://dummyjson.com/products/search?q=&limit=12&skip=${skip.value}`
     }
