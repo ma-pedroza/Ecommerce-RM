@@ -86,7 +86,6 @@ Funcionalidades principais:
 
 ### Menu de Categorias
 ![Menu de Categorias](ecommerce-RM/src/assets/images/Listagem%20e%20sele%C3%A7%C3%A3o%20de%20Categorias.png)
-)
 
 ### Busca de Produtos
 ![Busca de Produtos](ecommerce-RM/src/assets/images/Pesquisa%20de%20Produto.png)
