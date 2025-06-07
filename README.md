@@ -1,4 +1,6 @@
-# Ecommerce RM
+# Ecommerce RM |
+# Matheus Gomes Pedroza - RA 1998912
+# Rodrigo Bassalobre Garcia - RA 2007642
 
 ## Descrição do projeto
 Este projeto consiste em um catálogo de e-commerce que consome a API DummyJSON para exibir produtos de uma loja virtual. A aplicação permite aos usuários navegar por produtos, visualizar detalhes, filtrar por categorias, buscar em tempo real, gerenciar um carrinho de compras.
