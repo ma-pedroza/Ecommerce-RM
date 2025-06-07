@@ -91,6 +91,8 @@
 <script setup>
 import { onMounted, ref, computed } from 'vue'
 
+const showModal = false
+
 const carrinho = ref([])
 
 const pegarCarrinho = () => {

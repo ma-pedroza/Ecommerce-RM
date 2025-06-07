@@ -17,16 +17,21 @@
                         {{ product.nome }}
                     </h1>
                 </div>
-                <div>
-                    Botões
+                <div class="flex items-center gap-2">
+                    <div class="py-2 px-3 border-2 border-slate-200 rounded-xl transition transform hover:border-rose-300">
+                        <i class="fa-solid fa-share-nodes text-xl text-slate-300 hover:text-rose-300"></i>
+                    </div>
+                    <div class="py-2 px-3 border-2 border-slate-200 rounded-xl transition transform hover:border-rose-300">
+                        <i class="fa-regular fa-heart text-xl text-slate-300 hover:text-rose-300"></i>
+                    </div>
                 </div>
             </div>
             <div class="grid grid-cols-2 gap-12 mt-5">
                 <div class="flex flex-col justify-center">
-                    <img class="bg-neutral-100 rounded- shadow-lg p-2" :src="product.thumbnail" alt="">
+                    <img class="bg-neutral-100 rounded-lg shadow-lg p-2" :src="product.thumbnail" alt="">
                     <div class="grid grid-cols-4 gap-4 mt-5">
                         <div v-for="f in product.images">
-                            <img class="bg-neutral-100 rounded-xl shadow-lg p-2" :src="f" alt="">
+                            <img class="bg-neutral-100 rounded-xl shadow-lg p-2 hover:scale-110 duration-400 transition transform" :src="f" alt="">
                         </div>
                     </div>
                 </div>
@@ -54,8 +59,14 @@
                         </div> 
                     </div>
                     <div class="flex space-x-4 mt-24 pt-6">
-                        <button @click="adicionarAoCarrinho(product)" class="cursor-pointer flex-1 bg-gradient-to-r from-emerald-500 to-teal-500 text-white py-4 px-8 rounded-2xl hover:scale-105 transition transform duration-400 hover:from-emerald-600 hover:to-teal-600 shadow-lg shadow-emerald-500/25">Add to cart</button>
-                        <button class="border border-2 border-slate-200 rounded-2xl"><i class="p4 fa-solid fa-cart-shopping text-xl p-4 text-slate-300"></i></button>
+                        <button @click="adicionarAoCarrinho(product), showMessage = true, setTimeout" class="cursor-pointer flex-1 bg-gradient-to-r from-emerald-500 to-teal-500 text-white py-4 px-8 rounded-2xl hover:scale-105 transition transform duration-400 hover:from-emerald-600 hover:to-teal-600 shadow-lg shadow-emerald-500/25">Add to cart</button>
+                        <router-link to="/cart" class="border border-2 border-slate-200 rounded-2xl hover:scale-110 hover:shadow-lg transition transform hover:border-emerald-500"><i class="p4 fa-solid fa-cart-shopping text-xl p-4 text-slate-300 hover:text-emerald-500"></i></router-link>
+                    </div>
+                    <div class="flex row gap-3 w-max px-5 mt-5 shadow-lg bg-gradient-to-r from-teal-500 to-emerald-500 text-center rounded-2xl items-center transition-all" v-if="showMessage === true">
+                        <div class="h-6 w-6 rounded-full bg-emerald-400 text-center mt-2 mb-2">
+                            <i class="fa-solid fa-check text-white"></i>
+                        </div>
+                        <h2 class="font-medium text-md text-white">Added to cart!</h2>
                     </div>
                 </div>
             </div>
@@ -79,6 +90,7 @@ import { useRoute, useRouter } from 'vue-router'
 const product = ref({})
 const route = useRoute()
 const router = useRouter()
+const showMessage = ref(false)
 
 const FetchProduto = async() => {
     const id = route.params.id
@@ -132,6 +144,11 @@ const adicionarAoCarrinho = (produto) => {
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
     console.log(localStorage.getItem('carrinho'))
 }
+
+setTimeout(() => {
+    showMessage.value = false
+
+}, 5000)
 
 
 onMounted(FetchProduto)
