@@ -79,7 +79,7 @@ Funcionalidades principais:
 ## Prints das telas desenvolvidas
 
 ### Listagem de Produtos
-![Listagem de Produtos](src/assets/images/Listagem-de-Produtos.png)
+![Listagem de Produtos](ecommerce-RM/src/assets/images/Listagem-de-Produtos.png)
 
 ### Detalhes do Produto
 ![Detalhes do Produto](./screenshots/detalhes-produto.png)
