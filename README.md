@@ -82,16 +82,17 @@ Funcionalidades principais:
 ![Listagem de Produtos](ecommerce-RM/src/assets/images/Listagem%20de%20Produtos.png)
 
 ### Detalhes do Produto
-![Detalhes do Produto](./screenshots/detalhes-produto.png)
+![Detalhes do Produto](ecommerce-RM/src/assets/images/Detalhes%20de%20Produtos.png)
 
 ### Menu de Categorias
-![Menu de Categorias](./screenshots/menu-categorias.png)
+![Menu de Categorias](ecommerce-RM/src/assets/images/Listagem%20e%20sele%C3%A7%C3%A3o%20de%20Categorias.png)
+)
 
 ### Busca de Produtos
-![Busca de Produtos](./screenshots/busca-produtos.png)
+![Busca de Produtos](ecommerce-RM/src/assets/images/Pesquisa%20de%20Produto.png)
 
 ### Carrinho de Compras (Opcional)
-![Carrinho de Compras](./screenshots/carrinho-compras.png)
+![Carrinho de Compras](ecommerce-RM/src/assets/images/Carrinho.png)
 
 ---
 
