@@ -4,7 +4,7 @@
 Este projeto consiste em um catálogo de e-commerce que consome a API DummyJSON para exibir produtos de uma loja virtual. A aplicação permite aos usuários navegar por produtos, visualizar detalhes, filtrar por categorias, buscar em tempo real, gerenciar um carrinho de compras.
 
 Funcionalidades principais:
-- Listagem responsiva de produtos exibindo nome, imagem, preço, categoria e estoque
+- Listagem de produtos exibindo nome, imagem, preço, categoria e estoque
 - Paginação para navegação entre páginas de produtos
 - Visualização detalhada do produto ao clicar
 - Filtrar produtos por categoria
@@ -72,7 +72,7 @@ Funcionalidades principais:
 - Carrinho de compras:
   - Adição de produtos com quantidade inicial 1.
   - Alteração da quantidade e remoção de itens no carrinho.
-  - Persistência temporária do carrinho durante a navegação (sem salvar no banco ou sessão).
+  - Persistência temporária do carrinho durante a navegação.
 
 ---
 
@@ -82,7 +82,7 @@ Funcionalidades principais:
 ![Listagem de Produtos](ecommerce-RM/src/assets/images/Listagem%20de%20Produtos.png)
 
 ### Detalhes do Produto
-![Detalhes do Produto](ecommerce-RM/src/assets/images/Detalhes%20de%20Produtos.png)
+![Detalhes do Produto](ecommerce-RM/src/assets/images/Detalhes%20de%20Produto.png)
 
 ### Menu de Categorias
 ![Menu de Categorias](ecommerce-RM/src/assets/images/Listagem%20e%20sele%C3%A7%C3%A3o%20de%20Categorias.png)
