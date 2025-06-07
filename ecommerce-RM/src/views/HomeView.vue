@@ -87,7 +87,7 @@
 <template>
   <main>
     <Header @categoriaSelecionada="setcategoriaSelecionada"></Header>
-    <div class="grid grid-cols-4 gap-5 mt-5 px-20">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10 px-18">
       <ProductCard v-for="p in produtos" :produto="p"></ProductCard>
     </div>
     <div class="flex items-center justify-center pt-5 pb-5 space-x-9">
