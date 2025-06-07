@@ -15,9 +15,8 @@
                     </div>                
                 </div>
             <div class="flex items-center space-x-9 ">
-                <button><i class="p4 fa-regular fa-heart text-xl text-white"></i></button>
+                <button><i class="p4 fa-regular fa-heart text-xl text-white hover:text-rose-400 hover:scale-110 transition transform duration-300"></i></button>
                 <router-link to="/cart"><i class="p4 fa-solid fa-cart-shopping text-xl text-white hover:text-emerald-300 hover:scale-110 transition transform duration-300"></i></router-link>
-                <!-- POR ENQUANTO SEM FUNCIONALIDADES -->
             </div>
         </div>
     </div>
