@@ -1,4 +1,4 @@
-# Ecommerce RM |
+# Ecommerce RM 
 # Matheus Gomes Pedroza - RA 1998912
 # Rodrigo Bassalobre Garcia - RA 2007642
 
@@ -94,13 +94,3 @@ Funcionalidades principais:
 
 ### Carrinho de Compras (Opcional)
 ![Carrinho de Compras](ecommerce-RM/src/assets/images/Carrinho.png)
-
----
-
-## Vídeo demonstrativo
-
-Veja o vídeo no YouTube mostrando a aplicação rodando localmente, onde um dos participantes explica o funcionamento e apresenta as funcionalidades principais:
-
-[Link do vídeo no YouTube](https://youtu.be/seuvideolink)
-
----
